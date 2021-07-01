@@ -20,7 +20,7 @@ elsif array.length == 2
     output =  array.join(' & ')
     puts output
    
-elsif array.length ==1 || 0
+elsif array.length < 2
     output =  array.join()
     puts output
 
