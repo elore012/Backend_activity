@@ -8,10 +8,13 @@ def uniq(input)
     else
         output.push(input[number])
     end
-    if duplicate.include?(output.last)
-        output.pop()
+    
+    (0...output.length).each do |number|
+        if duplicate.include?(output[number])
+            output.delete(output[number])
         end
     end
+end
     
     return output
     end
