@@ -1,16 +1,19 @@
 def bouncingBall (input)
+    floatInput = input.to_f
     mothersHeight = 1.5
     x = 0.66
     bounce = 0
-    while input > mothersHeight
-    currentHeight = input * x
-    lessFromInput = input - currentHeight
+    while floatInput > mothersHeight
+    currentHeight = floatInput * x
+    lessFromInput = floatInput - currentHeight
     bounce +=2
-    input = input - lessFromInput
+    floatInput = floatInput - lessFromInput
     end
-    return bounce-1
+    return (bounce.to_f) - 1
 end
 
 puts bouncingBall(100)
 puts bouncingBall(10)
 puts bouncingBall(3)
+puts bouncingBall(1.4)
+puts bouncingBall(1)
